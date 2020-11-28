@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/libs/tooltipster.bundle.min.css" />
+    </head>
+
+    <body>
+        <p class="tooltip">Aguarde...</p>
+        <button id="botao">Meu teste</button>
+
+
+        <script src="js/jquery.js"></script >
+        <script src="js/tooltipster.bundle.min.js"></script>
+        <script>
+
+            $('.tooltip').tooltipster({
+                trigger: 'custom'
+            });
+
+            $('#botao').click(function() {
+
+                $('.tooltip').tooltipster('open').tooltipster('content', 'Olá, sou uma mensagem do tooltipster'); 
+
+            });
+
+        </script>
+    </body>
+</html>

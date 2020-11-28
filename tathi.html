@@ -1,0 +1,22 @@
+<ul>
+    <li>A</li>
+    <li>B</li>    
+    <li>C</li>
+</ul>
+
+<script src="js/jquery.js"></script>
+
+<script>
+
+	$('li').each(function() {
+    var texto = $(this).text();
+    console.log('Utilizando "li" ' + texto);
+	});
+
+	var letras = ['a', 'b', 'c'];
+
+		$.each(letras, function() {
+
+     	console.log('Utilizando var array ' + this);
+	});
+</script>

@@ -1,0 +1,19 @@
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+</ul>
+<script src="js/jquery.js"></script>
+<script>
+    $('li').dblclick(function() {
+
+    var $this = $(this);
+
+    $this.fadeOut(function() {
+        $this.remove();
+    })
+});
+// Para evitar de ter que fazer duas vezes $(this) Luciano decidiu guardar o this promovido para jQuery Object na variável $this. O prefixo $ deixa claro para ela que é um jQuery Object e não um this ordinário.
+
+//Para que a remoção seja feito só depois do efeito de fadeOut ter terminado, ela passou uma função para a função fadeOut. Essa função é chamada só quando fadeOut termina. Sendo assim, na função ela pôde chamar $this.remove() com a certeza que o efeito de fadeOut já foi processado.
+</script>
